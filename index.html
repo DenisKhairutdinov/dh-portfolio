@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Портфолио | Хайрутдинов Денис</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#f8fafcff" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/Idealist-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/Bounded-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" crossorigin src="/assets/index.njk-aRz344Ve.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/main-BvNtKaUG.js">
+    
+    <script type="module">import'data:text/javascript,if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <header class="header">
+  <div class="header__wrapper">
+    <h1 class="header__title">Портфолио</h1>
+    <p class="header__text">HTML-верстальщик / Junior Frontend Developer</p>
+  </div>
+  <nav class="menu">
+    <ul class="menu__list" role="tablist" data-tab-menu>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button menu__button--is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="about-panel"
+          id="about-tab"
+        >
+          О себе
+        </button>
+      </li>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="projects-panel"
+          id="projects-tab"
+        >
+          Проекты
+        </button>
+      </li>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="contacts-panel"
+          id="contacts-tab"
+        >
+          Контакты
+        </button>
+      </li>
+    </ul>
+    <div class="menu__placeholder" data-tab-placeholder></div>
+  </nav>
+</header>
+
+    <main class="main">
+  <section
+  class="container about container--is-active"
+  role="tabpanel"
+  aria-labelledby="about-tab"
+  id="about-panel"
+  aria-hidden="false"
+  data-tab-panel
+>
+  <div class="about__wrapper" data-wrapper>
+    <picture class="about__photo-wrapper">
+      <source srcset="/assets/photo2-XpnyAfSL.webp" type="image/webp" />
+      <img class="about__photo" src="/assets/photo2-hzkoFAJH.png" alt="" decoding="async" />
+    </picture>
+    <div class="about__info">
+      <p class="about__text">
+        Привет! Меня зовут Хайрутдинов Денис. Ищу позицию HTML-верстальщик / Junior Frontend
+        Developer.
+      </p>
+      <p class="about__text bold-text">Стек:</p>
+      <ul class="about__list">
+        <li class="about__item">
+          HTML • CSS • SCSS • PostCSS • LightningCSS • JavaScript • TypeScript
+        </li>
+        <li class="about__item">Семантика • Доступность • Кроссбраузерность • БЭМ • Flex/Grid</li>
+        <li class="about__item">
+          DOM API • GSAP • requestAnimationFrame • Intersection Observer • View Transitions API •
+          Асинхронность
+        </li>
+        <li class="about__item">Pub/Sub • Throttle • Debounce</li>
+        <li class="about__item">Vite • Vituum • Nunjucks</li>
+        <li class="about__item">ESLint • Stylelint • Prettier • Lighthouse • Git</li>
+        <li class="about__item">Figma • Photoshop • Illustrator • Основы дизайна</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section
+  class="container projects"
+  role="tabpanel"
+  aria-labelledby="projects-tab"
+  id="projects-panel"
+  aria-hidden="true"
+  data-tab-panel
+>
+  <div class="projects__wrapper" data-wrapper>
+    <ul class="projects__list" data-project-cards>
+      <li class="projects__item">
+        <button
+          class="project"
+          tabindex="0"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-controls="castpress"
+          data-event-button
+          data-pub-event="castpress: open-request"
+          data-sub-event="castpress: close"
+          type="button"
+        >
+          <div class="project__wrapper">
+            <video class="project__video" muted playsinline loop>
+              <source src="/assets/castpress-D1QCosBl.webm" type="video/webm" />
+            </video>
+          </div>
+          <div class="project__info">
+            <h2 class="project__title">CastPress.</h2>
+            <p class="project__description">Многостраничный сайт<br />студии подкастов</p>
+            <div class="project-links">
+              <a
+                href="https://castpress-gray.vercel.app/"
+                class="project-link"
+                aria-label="Перейти на сайт проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-web"></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/DenisKhairutdinov/CastPress"
+                class="project-link"
+                aria-label="Перейти в GitHub проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </button>
+      </li>
+      <li class="projects__item">
+        <button
+          class="project"
+          tabindex="0"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-controls="mndance"
+          data-event-button
+          data-pub-event="mndance: open-request"
+          data-sub-event="mndance: close"
+          type="button"
+        >
+          <div class="project__wrapper">
+            <video class="project__video" muted playsinline loop>
+              <source src="/assets/mndance-ChyjQT7u.webm" type="video/webm" />
+            </video>
+          </div>
+          <div class="project__info">
+            <h2 class="project__title">MNDance</h2>
+            <p class="project__description">Лендинг<br />студии танцев</p>
+            <div class="project-links">
+              <a
+                href="https://mndance.vercel.app/"
+                class="project-link"
+                aria-label="Перейти на сайт проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-web"></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/DenisKhairutdinov/MNDance"
+                class="project-link"
+                aria-label="Перейти в GitHub проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </button>
+      </li>
+      <li class="projects__item">
+        <button
+          class="project"
+          tabindex="0"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-controls="onehp"
+          data-event-button
+          data-pub-event="onehp: open-request"
+          data-sub-event="onehp: close"
+          type="button"
+        >
+          <div class="project__wrapper">
+            <video class="project__video" muted playsinline loop>
+              <source src="/assets/onehp-wLEK8CKL.webm" type="video/webm" />
+            </video>
+          </div>
+          <div class="project__info">
+            <h2 class="project__title">OneHP</h2>
+            <p class="project__description">Браузерная<br />2D игра</p>
+            <div class="project-links">
+              <a
+                href="https://onehp.vercel.app/"
+                class="project-link"
+                aria-label="Перейти на сайт проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-web"></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/DenisKhairutdinov/oneHP/tree/main"
+                class="project-link"
+                aria-label="Перейти в GitHub проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.figma.com/design/TolXaz7FUxjJHn4Hp2kbFN/oneHP?node-id=302-2343&t=X4ph6T1sbUms3oR3-1"
+                class="project-link"
+                aria-label="Перейти в Figma проекта"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-figma"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </button>
+      </li>
+      <li class="projects__item">
+        <button
+          class="project"
+          tabindex="0"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-controls="design"
+          data-event-button
+          data-pub-event="design: open-request"
+          data-sub-event="design: close"
+          type="button"
+        >
+          <div class="project__wrapper">
+            <picture class="project__image-wrapper">
+              <source srcset="/assets/coffee-drunker-WULefREJ.webp" type="image/webp" />
+              <img
+                class="project__image"
+                src="/assets/coffee-drunker-BGyew6ST.png"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="project__info">
+            <h2 class="project__title">Дизайн</h2>
+            <p class="project__description">Айдентика<br />и полиграфия</p>
+            <div class="project-links" style="visibility: hidden;">
+              <a href="https://web.telegram.org/" class="project-link" aria-label="">
+                <svg class="project-icon" aria-hidden="true">
+                  <use href="#icon-figma"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <section
+  class="container contacts"
+  role="tabpanel"
+  aria-labelledby="contacts-tab"
+  id="contacts-panel"
+  aria-hidden="true"
+  data-tab-panel
+>
+  <div class="contacts__wrapper" data-wrapper>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <a
+          href="https://web.telegram.org/@jackrassul"
+          class="contacts__link"
+          aria-label="перейти в телеграм"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="contacts__icon" aria-hidden="true">
+            <use href="#icon-telegram"></use>
+          </svg>
+          <span class="contacts__text">@jackrassul</span>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a href="tel:+79995889802" class="contacts__link" aria-label="">
+          <svg class="contacts__icon" aria-hidden="true">
+            <use href="#icon-phone"></use>
+          </svg>
+          <span class="contacts__text">8 (999) 588-98-02</span>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a href="mailto:jackrassul@icloud.com" class="contacts__link" aria-label="">
+          <svg class="contacts__icon" aria-hidden="true">
+            <use href="#icon-mail"></use>
+          </svg>
+          <span class="contacts__text">jackrassul@icloud.com</span>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a
+          href="https://github.com/DenisKhairutdinov?tab=repositories"
+          class="contacts__link"
+          aria-label="перейти в гитхаб"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="contacts__icon" aria-hidden="true">
+            <use href="#icon-github"></use>
+          </svg>
+          <span class="contacts__text">GitHub</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- modals  -->
+  <dialog
+  id="castpress"
+  class="modal"
+  aria-labelledby="castpress__title"
+  data-modal
+  data-sub-event="castpress: open-request"
+  data-pub-event="castpress: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">CastPress.</h2>
+    <p class="modal__description">Многостраничный сайт студии подкастов</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="castpress: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://castpress-gray.vercel.app/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/CastPress"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="castpress: open-request"
+      >
+        <source src="/assets/castpress-D1QCosBl.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">CastPress.</span> - сайт подкаст-студии с каталогом эпизодов, блогом и
+      информационными страницами. Часть контента генерируется динамически на основе JSON-файлов, что
+      позволило реализовать каталог эпизодов, блог и навигацию между страницами без ручного
+      дублирования данных.
+    </p>
+
+    <h3 class="modal__subtitle">Контент на основе данных</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Загрузка и обработка данных из JSON-файлов;</li>
+      <li class="modal__item">Генерация списков эпизодов подкастов;</li>
+      <li class="modal__item">Генерация списка статей блога;</li>
+      <li class="modal__item">Формирование страниц на основе единого источника данных;</li>
+      <li class="modal__item">Собственная реализация пагинации без сторонних библиотек;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Пользовательский интерфейс</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Светлая и темная темы оформления;</li>
+      <li class="modal__item">
+        Переключение темы с сохранением выбора пользователя в localStorage;
+      </li>
+      <li class="modal__item">
+        Плавные переходы между состояниями интерфейса через View Transition API;
+      </li>
+      <li class="modal__item">Анимации появления элементов через Intersection Observer API;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Дополнительные решения</h3>
+    <ul class="modal__list">
+      <li class="modal__item">
+        Спроектирована и реализована кнопка переключения темы, отсутствовавшая в исходном дизайне;
+      </li>
+      <li class="modal__item">
+        Исправлены некоторые неточности макета, связанные с системой отступов и визуальным ритмом
+        интерфейса;
+      </li>
+    </ul>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      HTML5 • SCSS • LightningCSS • JavaScript (ES6+) • TypeScript • Vite • Vituum • Nunjucks • View
+      Transition API • Intersection Observer API • ESLint • Stylelint • Prettier • JSON
+    </p>
+
+    <h3 class="modal__subtitle">Lighthouse</h3>
+    <p class="modal__text">Результаты проверки Lighthouse представлены ниже.</p>
+
+    <div class="modal__lighthouse">
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/assets/castpress-mobile--N6DRl4Z.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/assets/castpress-mobile-0rgThkAx.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/assets/castpress-desktop-DJwEEyKi.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/assets/castpress-desktop-C5YiDmTt.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</dialog>
+
+  <dialog
+  id="mndance"
+  class="modal"
+  aria-labelledby="mndance__title"
+  data-modal
+  data-sub-event="mndance: open-request"
+  data-pub-event="mndance: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">MNDance</h2>
+    <p class="modal__description">Лендинг студии танцев</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="mndance: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://mndance.vercel.app/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/MNDance"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="mndance: open-request"
+      >
+        <source src="/assets/mndance-ChyjQT7u.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">MNDance</span> - лендинг студии танцев, для которого я самостоятельно
+      разработал дизайн и реализовал его в коде. Проект создавался с упором на современный
+      интерфейс, плавные анимации и удобную навигацию по странице. Исходный файл дизайна не
+      публикуется, так как проект создавался в процессе разработки и использовался как рабочий
+      инструмент.
+    </p>
+
+    <h3 class="modal__subtitle">Пользовательский интерфейс</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Навигация по секциям страницы;</li>
+      <li class="modal__item">Автоматическое определение активного раздела меню;</li>
+      <li class="modal__item">Интерактивное расписание занятий;</li>
+      <li class="modal__item">Модальные окна на основе нативного элемента dialog;</li>
+      <li class="modal__item">Собственная реализация бесконечного слайдера;</li>
+      <li class="modal__item">Плавная прокрутка страницы;</li>
+      <li class="modal__item">Анимации появления элементов при скролле;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">JavaScript / TypeScript</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Модульная архитектура проекта;</li>
+      <li class="modal__item">
+        Использование паттерна Pub/Sub для взаимодействия между независимыми модулями;
+      </li>
+      <li class="modal__item">Работа с DOM через отдельные модули;</li>
+      <li class="modal__item">Обработка пользовательских событий;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      HTML5 • SCSS • LightningCSS • JavaScript (ES6+) • TypeScript • Vite • Vituum • Nunjucks • GSAP
+      • ESLint • Stylelint • Prettier
+    </p>
+
+    <h3 class="modal__subtitle">Lighthouse</h3>
+
+    <p class="modal__text">
+      Использование ScrollSmoother положительно влияет на пользовательский опыт и качество анимаций,
+      однако снижает оценку Lighthouse Performance на десктопных устройствах. После анализа было
+      принято решение сохранить данное решение, т.к. сайт остается стабильным, не имеет заметных
+      проблем с отрисовкой интерфейса и корректно работает на мобильных и десктопных устройствах.
+    </p>
+    <p class="modal__text">Результаты проверки Lighthouse представлены ниже.</p>
+
+    <div class="modal__lighthouse">
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/assets/mndance-mobile-CrxHmOyB.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/assets/mndance-mobile-DfbX0Zjb.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/assets/mndance-desktop-CTT-soCP.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/assets/mndance-desktop-QjhrnIXc.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</dialog>
+
+  <dialog
+  id="onehp"
+  class="modal"
+  aria-labelledby="onehp__title"
+  data-modal
+  data-sub-event="onehp: open-request"
+  data-pub-event="onehp: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">OneHP</h2>
+    <p class="modal__description">Браузерная 2D игра</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="onehp: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://onehp.vercel.app/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/oneHP/"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+      <a
+        href="https://www.figma.com/design/TolXaz7FUxjJHn4Hp2kbFN/oneHP?node-id=302-2343&t=X4ph6T1sbUms3oR3-1"
+        class="project-link"
+        aria-label="Перейти в Figma проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-figma"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="onehp: open-request"
+      >
+        <source src="/assets/onehp-wLEK8CKL.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">ОneHP</span> - это минималистичный раннер, в котором у игрока есть
+      только одно очко здоровья, и он должен уклоняться от врагов, прыгая или пригибаясь. Проект
+      демонстрирует чистый JavaScript без фреймворков, рендеринг через DOM, модульную архитектуру и
+      событийно-ориентированную систему PubSub.
+    </p>
+
+    <h3 class="modal__subtitle">Особенности</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Чистый JavaScript без фреймворков и Canvas;</li>
+      <li class="modal__item">Полностью DOM-ориентированные анимации;</li>
+      <li class="modal__item">
+        Модульная архитектура (игрок, враги, игровой мир, столкновения, счёт);
+      </li>
+      <li class="modal__item">Поток событий PubSub для слабосвязанной логики;</li>
+      <li class="modal__item">Игровой цикл на основе requestAnimationFrame;</li>
+      <li class="modal__item">Обнаружение столкновений с помощью DOM-хитбоксов;</li>
+      <li class="modal__item">Сохранение рекорда в localStorage;</li>
+      <li class="modal__item">Спрайты и визуальные элементы, созданные вручную.</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Обзор архитектуры</h3>
+    <p class="modal__text">
+      Игра построена на небольших изолированных модулях, каждый из которых отвечает за определённую
+      часть логики:
+    </p>
+    <ul class="modal__list">
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль игрока - состояние, анимации, логика прыжка и
+        приседания;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль врагов - создание врагов, их перемещение и пул
+        объектов;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль игрового мира - скорость мира и фон;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль столкновений - проверка хитбоксов и события
+        столкновений;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль счёта - подсчёт очков и сохранение данных в
+        localStorage.
+      </li>
+    </ul>
+    <p class="modal__text">
+      Все модули импортируются в главный index.js, который запускает основной игровой цикл.
+    </p>
+
+    <h3 class="modal__subtitle">Поток событий PubSub</h3>
+    <p class="modal__text">
+      В игре используется лёгкий паттерн публикации-подписки (PubSub), который позволяет сохранять
+      слабую связанность между модулями:
+    </p>
+    <ul class="modal__list">
+      <li class="modal__item">Модуль столкновений обнаруживает столкновение.</li>
+      <li class="modal__item">Публикует событие "collision:detected".</li>
+      <li class="modal__item">
+        Модуль игрока получает событие, обновляет своё состояние и публикует "player:dead".
+      </li>
+      <li class="modal__item">
+        Модули игрового мира, врагов и счёта получают это событие и останавливают или изменяют своё
+        поведение.
+      </li>
+    </ul>
+    <p class="modal__text">
+      Такой подход упрощает расширение системы и делает её логику более понятной.
+    </p>
+
+    <h3 class="modal__subtitle">Графика</h3>
+    <p class="modal__text">Все спрайты и визуальные ресурсы были разработаны вручную в Figma.</p>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      JavaScript (ES Modules) • DOM API • CSS-анимации и переходы • requestAnimationFrame •
+      localStorage
+    </p>
+  </div>
+</dialog>
+
+  <dialog
+  id="design"
+  class="modal"
+  aria-labelledby="design__title"
+  data-modal
+  data-sub-event="design: open-request"
+  data-pub-event="design: close"
+>
+  <header class="modal__header modal__header--design">
+    <h2 class="modal__title">Дизайн</h2>
+    <p class="modal__description">Айдентика и полиграфия</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="design: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__project-wrapper">
+      <picture class="modal__photo-wrapper">
+        <source srcset="/assets/coffee-drunker-WULefREJ.webp" type="image/webp" />
+        <img
+          class="modal__photo"
+          src="/assets/coffee-drunker-BGyew6ST.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <div class="modal__info">
+        <h3 class="modal__subtitle modal__subtitle--design">Логотип кофейни Coffee Drunker</h3>
+        <a
+          href="https://www.figma.com/design/QAftouf8eHwK7nxagNwnto/coffee-drunker?node-id=154-1012&t=VsWT8hJQ9LIUTvRL-1"
+          class="project-link"
+          aria-label="перейти в Figma проекта"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="project-icon" aria-hidden="true">
+            <use href="#icon-figma"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="modal__project-wrapper">
+      <picture class="modal__photo-wrapper">
+        <source srcset="/assets/aline-Bza4V3Ao.webp" type="image/webp" />
+        <img
+          class="modal__photo"
+          src="/assets/aline-CXE7-fKo.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <div class="modal__info">
+        <h3 class="modal__subtitle modal__subtitle--design">Логотип архитектурного бюро Aline</h3>
+        <a
+          href="https://www.figma.com/design/Epo76L6vYldDOt2pxJeLnq/%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF--%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%BD%D0%BE%D0%B5-%D0%B1%D1%8E%D1%80%D0%BE-aline?node-id=149-2&t=VsWT8hJQ9LIUTvRL-1"
+          class="project-link"
+          aria-label="перейти в Figma проекта"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="project-icon" aria-hidden="true">
+            <use href="#icon-figma"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="modal__project-wrapper">
+      <picture class="modal__photo-wrapper">
+        <source srcset="/assets/lofi-house-CR58Xivn.webp" type="image/webp" />
+        <img
+          class="modal__photo"
+          src="/assets/lofi-house-BnUY_AYQ.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <div class="modal__info">
+        <h3 class="modal__subtitle modal__subtitle--design">Плакат для муз. события Lo-Fi House</h3>
+        <a
+          href="https://www.figma.com/design/4Lp0eeJdZodKxwofgkhJzT/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82-Lo-FI-House?node-id=87-2&t=VsWT8hJQ9LIUTvRL-1"
+          class="project-link"
+          aria-label="перейти в Figma проекта"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="project-icon" aria-hidden="true">
+            <use href="#icon-figma"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="modal__project-wrapper">
+      <picture class="modal__photo-wrapper">
+        <source srcset="/assets/lighthouse-BuhiL_DL.webp" type="image/webp" />
+        <img
+          class="modal__photo"
+          src="/assets/lighthouse-J07TBtkm.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <div class="modal__info">
+        <h3 class="modal__subtitle modal__subtitle--design">Лифлет тура по маякам Камчатки</h3>
+        <a
+          href="https://www.figma.com/design/rh9VoB9WqtM8OhXI4oOW8i/%D0%9B%D0%B8%D1%84%D0%BB%D0%B5%D1%82-%D0%A2%D1%83%D1%80-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%8F%D0%BA%D0%B0%D0%BC?node-id=132-2&t=VsWT8hJQ9LIUTvRL-1"
+          class="project-link"
+          aria-label="перейти в Figma проекта"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="project-icon" aria-hidden="true">
+            <use href="#icon-figma"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+</main>
+    <footer class="footer">2025 - 2026</footer>
+
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy-C3SdwBGn.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index.njk-legacy-CxS8FHFh.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
