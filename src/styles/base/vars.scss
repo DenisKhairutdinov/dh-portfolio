@@ -1,0 +1,40 @@
+@use '/src/styles/base/functions' as *;
+
+// Colors
+$bg: #f8fafc;
+$primary: #171717;
+$secondary: #fff;
+$placeholder: #f5f5f5;
+$ghost: #999;
+$backdrop: #171717cc;
+
+// Spacing
+$base: rem(4);
+$xs: rem(8);
+$xs-sm: rem(10);
+$sm: rem(12);
+$md: rem(16);
+$lg: rem(20);
+$xl: rem(24);
+$xxl: rem(32);
+
+// Radius
+$radius-xs: rem(8);
+$radius-sm: rem(12);
+$radius-md: rem(16);
+$radius-xl: rem(24);
+$radius-xxl: rem(32);
+
+// Other
+$shadow-sm:
+  0px 1px 2px #0000001a,
+  0px 1px 3px #0000001a;
+$shadow-md:
+  0px 2px 4px #0000001a,
+  0px 4px 6px #0000001a;
+
+// Animations
+$fast: 150ms;
+$medium: 250ms;
+$slow: 500ms;
+$ease-out: cubic-bezier(0, 0.55, 0.45, 1);

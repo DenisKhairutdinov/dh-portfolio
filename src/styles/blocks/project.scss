@@ -1,0 +1,84 @@
+.project {
+  touch-action: manipulation;
+  cursor: pointer;
+
+  inline-size: 100%;
+  max-inline-size: rem(400);
+  block-size: 100%;
+  padding: calc(#{$xs} / 2);
+  border-radius: $radius-xl;
+
+  color: $primary;
+
+  background-color: $secondary;
+  box-shadow: $shadow-sm;
+
+  transition:
+    translate $medium $ease-out,
+    box-shadow $medium $ease-out;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus-visible {
+    translate: 0 rem(-4);
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+    box-shadow: $shadow-md;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 rem(-4);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+.project__wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 5 / 3;
+  border-radius: calc(#{$radius-xl} - #{$xs} / 2);
+
+  background-color: $placeholder;
+  box-shadow: $shadow-sm;
+}
+
+.project__video {
+  position: absolute;
+  inset-inline-start: 50%;
+  translate: -50%;
+  block-size: 100%;
+}
+
+.project__image {
+  position: absolute;
+  inset-block-start: -20%;
+
+  inline-size: 100%;
+  min-block-size: 100%;
+
+  object-fit: cover;
+}
+
+.project__info {
+  padding-block: $sm;
+  padding-inline: $xs;
+}
+
+.project__title {
+  @include heading-2;
+  @include bold-text;
+
+  margin-block-end: $xs;
+  text-align: start;
+}
+
+.project__description {
+  @include paragraph;
+
+  margin-block-end: $md;
+  text-align: start;
+}

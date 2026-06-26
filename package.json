@@ -1,0 +1,44 @@
+{
+  "homepage": "https://DenisKhairutdinov.github.io/dh-portfolio",
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-legacy": "^8.0.2",
+    "@vituum/vite-plugin-nunjucks": "^2.0.1",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-unicorn": "^67.0.0",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.6.0",
+    "lightningcss": "^1.32.0",
+    "modern-css-reset": "^1.4.0",
+    "prettier": "^3.8.4",
+    "prettier-plugin-jinja-template": "^2.2.0",
+    "sass-embedded": "^1.100.0",
+    "stylelint": "^17.13.0",
+    "stylelint-config-clean-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.61.1",
+    "vite": "^8.0.12",
+    "vite-plugin-css-injected-by-js": "^5.0.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vituum": "^2.0.2"
+  },
+  "dependencies": {
+    "22": "^0.0.0"
+  },
+  "overrides": {
+    "chokidar": "^3.6.0"
+  }
+}

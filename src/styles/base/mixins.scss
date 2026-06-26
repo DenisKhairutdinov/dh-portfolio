@@ -1,0 +1,130 @@
+@use '/src/styles/base/functions' as *;
+@use '/src/styles/base/vars' as *;
+
+@mixin heading-1 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(28);
+  font-weight: 400;
+  line-height: rem(32);
+  letter-spacing: rem(-1);
+}
+
+@mixin heading-2 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: rem(24);
+  letter-spacing: rem(-1);
+}
+
+@mixin heading-3 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: rem(20);
+  letter-spacing: rem(-1);
+}
+
+@mixin paragraph {
+  font-family: Idealist-Sans, sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(24);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-large {
+  font-family: Idealist-Sans, sans-serif;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: rem(28);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-small {
+  font-family: Idealist-Sans, sans-serif;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(20);
+  letter-spacing: rem(0);
+}
+
+@mixin bold-text {
+}
+
+@mixin heading-4 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(24);
+  letter-spacing: rem(-1);
+}
+
+@mixin centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin modal {
+  user-select: none;
+
+  translate: 0 rem(-20);
+
+  border: none;
+
+  opacity: 0;
+  background-color: $bg;
+  filter: blur(4px);
+
+  transition:
+    opacity $fast $ease-out,
+    translate $fast $ease-out,
+    display $fast $ease-out allow-discrete,
+    overlay $fast $ease-out allow-discrete;
+
+  &::backdrop {
+    opacity: 0;
+    background-color: $backdrop;
+    backdrop-filter: blur(4px);
+    transition:
+      opacity $fast $ease-out,
+      display $fast $ease-out allow-discrete,
+      overlay $fast $ease-out allow-discrete;
+  }
+
+  &[open]::backdrop {
+    opacity: 1;
+    transition:
+      opacity $medium $ease-out,
+      display $medium $ease-out allow-discrete,
+      overlay $medium $ease-out allow-discrete;
+  }
+
+  &[open] {
+    translate: 0 0;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 1;
+    filter: blur(0);
+
+    transition:
+      opacity $medium $ease-out,
+      translate $medium $ease-out,
+      display $medium $ease-out allow-discrete;
+  }
+
+  @starting-style {
+    &[open] {
+      translate: 0 rem(-20);
+      opacity: 0;
+      filter: blur(4px);
+    }
+
+    &[open]::backdrop {
+      opacity: 0;
+    }
+  }
+}

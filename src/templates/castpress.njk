@@ -1,0 +1,132 @@
+<dialog
+  id="castpress"
+  class="modal"
+  aria-labelledby="castpress__title"
+  data-modal
+  data-sub-event="castpress: open-request"
+  data-pub-event="castpress: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">CastPress.</h2>
+    <p class="modal__description">Многостраничный сайт студии подкастов</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="castpress: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://deniskhairutdinov.github.io/CastPress/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/CastPress"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="castpress: open-request"
+      >
+        <source src="/src/assets/video/castpress.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">CastPress.</span> - сайт подкаст-студии с каталогом эпизодов, блогом и
+      информационными страницами. Часть контента генерируется динамически на основе JSON-файлов, что
+      позволило реализовать каталог эпизодов, блог и навигацию между страницами без ручного
+      дублирования данных.
+    </p>
+
+    <h3 class="modal__subtitle">Контент на основе данных</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Загрузка и обработка данных из JSON-файлов;</li>
+      <li class="modal__item">Генерация списков эпизодов подкастов;</li>
+      <li class="modal__item">Генерация списка статей блога;</li>
+      <li class="modal__item">Формирование страниц на основе единого источника данных;</li>
+      <li class="modal__item">Собственная реализация пагинации без сторонних библиотек;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Пользовательский интерфейс</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Светлая и темная темы оформления;</li>
+      <li class="modal__item">
+        Переключение темы с сохранением выбора пользователя в localStorage;
+      </li>
+      <li class="modal__item">
+        Плавные переходы между состояниями интерфейса через View Transition API;
+      </li>
+      <li class="modal__item">Анимации появления элементов через Intersection Observer API;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Дополнительные решения</h3>
+    <ul class="modal__list">
+      <li class="modal__item">
+        Спроектирована и реализована кнопка переключения темы, отсутствовавшая в исходном дизайне;
+      </li>
+      <li class="modal__item">
+        Исправлены некоторые неточности макета, связанные с системой отступов и визуальным ритмом
+        интерфейса;
+      </li>
+    </ul>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      HTML5 • SCSS • LightningCSS • JavaScript (ES6+) • TypeScript • Vite • Vituum • Nunjucks • View
+      Transition API • Intersection Observer API • ESLint • Stylelint • Prettier • JSON
+    </p>
+
+    <h3 class="modal__subtitle">Lighthouse</h3>
+    <p class="modal__text">Результаты проверки Lighthouse представлены ниже.</p>
+
+    <div class="modal__lighthouse">
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/src/assets/images/lighthouse/castpress-mobile.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/src/assets/images/lighthouse/castpress-mobile.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/src/assets/images/lighthouse/castpress-desktop.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/src/assets/images/lighthouse/castpress-desktop.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</dialog>

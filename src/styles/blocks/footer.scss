@@ -1,0 +1,6 @@
+.footer {
+  @include centering;
+  @include paragraph-large;
+
+  padding-block-end: rem(40);
+}

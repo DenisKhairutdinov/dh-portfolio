@@ -1,0 +1,129 @@
+<dialog
+  id="mndance"
+  class="modal"
+  aria-labelledby="mndance__title"
+  data-modal
+  data-sub-event="mndance: open-request"
+  data-pub-event="mndance: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">MNDance</h2>
+    <p class="modal__description">Лендинг студии танцев</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="mndance: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://deniskhairutdinov.github.io/MNDance/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/MNDance"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="mndance: open-request"
+      >
+        <source src="/src/assets/video/mndance.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">MNDance</span> - лендинг студии танцев, для которого я самостоятельно
+      разработал дизайн и реализовал его в коде. Проект создавался с упором на современный
+      интерфейс, плавные анимации и удобную навигацию по странице. Исходный файл дизайна не
+      публикуется, так как проект создавался в процессе разработки и использовался как рабочий
+      инструмент.
+    </p>
+
+    <h3 class="modal__subtitle">Пользовательский интерфейс</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Навигация по секциям страницы;</li>
+      <li class="modal__item">Автоматическое определение активного раздела меню;</li>
+      <li class="modal__item">Интерактивное расписание занятий;</li>
+      <li class="modal__item">Модальные окна на основе нативного элемента dialog;</li>
+      <li class="modal__item">Собственная реализация бесконечного слайдера;</li>
+      <li class="modal__item">Плавная прокрутка страницы;</li>
+      <li class="modal__item">Анимации появления элементов при скролле;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">JavaScript / TypeScript</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Модульная архитектура проекта;</li>
+      <li class="modal__item">
+        Использование паттерна Pub/Sub для взаимодействия между независимыми модулями;
+      </li>
+      <li class="modal__item">Работа с DOM через отдельные модули;</li>
+      <li class="modal__item">Обработка пользовательских событий;</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      HTML5 • SCSS • LightningCSS • JavaScript (ES6+) • TypeScript • Vite • Vituum • Nunjucks • GSAP
+      • ESLint • Stylelint • Prettier
+    </p>
+
+    <h3 class="modal__subtitle">Lighthouse</h3>
+
+    <p class="modal__text">
+      Использование ScrollSmoother положительно влияет на пользовательский опыт и качество анимаций,
+      однако снижает оценку Lighthouse Performance на десктопных устройствах. После анализа было
+      принято решение сохранить данное решение, т.к. сайт остается стабильным, не имеет заметных
+      проблем с отрисовкой интерфейса и корректно работает на мобильных и десктопных устройствах.
+    </p>
+    <p class="modal__text">Результаты проверки Lighthouse представлены ниже.</p>
+
+    <div class="modal__lighthouse">
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/src/assets/images/lighthouse/mndance-mobile.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/src/assets/images/lighthouse/mndance-mobile.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="modal__lighthouse-wrapper">
+        <source srcset="/src/assets/images/lighthouse/mndance-desktop.webp" type="image/webp" />
+        <img
+          class="modal__lightouse-image"
+          src="/src/assets/images/lighthouse/mndance-desktop.png"
+          alt=""
+          decoding="async"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</dialog>

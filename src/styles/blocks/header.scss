@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: rem(40);
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: $xl;
+}
+
+.header__title {
+  @include heading-1;
+  @include bold-text;
+
+  margin-block-end: $sm;
+}
+
+.header__text {
+  @include paragraph-large;
+
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header__wrapper">
+    <h1 class="header__title">Портфолио</h1>
+    <p class="header__text">HTML-верстальщик / Junior Frontend Developer</p>
+  </div>
+  <nav class="menu">
+    <ul class="menu__list" role="tablist" data-tab-menu>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button menu__button--is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="about-panel"
+          id="about-tab"
+        >
+          О себе
+        </button>
+      </li>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="projects-panel"
+          id="projects-tab"
+        >
+          Проекты
+        </button>
+      </li>
+      <li class="menu__item" role="presentation">
+        <button
+          class="menu__button"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="contacts-panel"
+          id="contacts-tab"
+        >
+          Контакты
+        </button>
+      </li>
+    </ul>
+    <div class="menu__placeholder" data-tab-placeholder></div>
+  </nav>
+</header>

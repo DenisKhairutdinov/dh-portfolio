@@ -1,0 +1,118 @@
+@import 'modern-css-reset/dist/reset.css';
+
+@import '/src/styles/base/fonts';
+
+@import '/src/styles/blocks/+.css';
+
+html {
+  user-select: none;
+  color: $primary;
+
+  &:has(dialog:modal) {
+    overflow: hidden;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+
+  max-inline-size: rem(1200);
+  margin: 0 auto;
+
+  background-color: $bg;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  transition:
+    scale $slow $ease-out,
+    opacity $slow $ease-out;
+
+  @media (pointer: fine) {
+    &:active {
+      scale: 0.96;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      scale: 0.92;
+      opacity: 0.8;
+    }
+  }
+}
+
+img,
+svg {
+  display: block;
+}
+
+main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: height $slow $ease-out;
+}
+
+.container {
+  @include centering;
+  @include heading-1;
+
+  min-inline-size: 100%;
+  padding-block: $lg;
+  padding-inline: clamp(0.5rem, -0.182rem + 2.91vw, 2rem);
+
+  visibility: hidden;
+  opacity: 0;
+  filter: blur(4px);
+
+  transition:
+    opacity $medium $ease-out,
+    filter $medium $ease-out,
+    translate 1ms $medium,
+    visibility $medium $ease-out;
+
+  &.container--is-active {
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0);
+    transition:
+      opacity $medium $ease-out $medium,
+      filter $medium $ease-out $medium,
+      translate 1ms,
+      visibility $medium $ease-out;
+  }
+}
+
+.bold-text {
+  @include heading-4;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,152 @@
+<dialog
+  id="onehp"
+  class="modal"
+  aria-labelledby="onehp__title"
+  data-modal
+  data-sub-event="onehp: open-request"
+  data-pub-event="onehp: close"
+>
+  <header class="modal__header">
+    <h2 class="modal__title">OneHP</h2>
+    <p class="modal__description">Браузерная 2D игра</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="onehp: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="project-links modal__project-links">
+      <a
+        href="https://deniskhairutdinov.github.io/oneHP/"
+        class="project-link"
+        aria-label="Перейти на сайт проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-web"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/DenisKhairutdinov/oneHP/"
+        class="project-link"
+        aria-label="Перейти в GitHub проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-github"></use>
+        </svg>
+      </a>
+      <a
+        href="https://www.figma.com/design/TolXaz7FUxjJHn4Hp2kbFN/oneHP?node-id=302-2343&t=X4ph6T1sbUms3oR3-1"
+        class="project-link"
+        aria-label="Перейти в Figma проекта"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="project-icon" aria-hidden="true">
+          <use href="#icon-figma"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <div class="modal__wrapper">
+    <div class="modal__video-wrapper">
+      <video
+        class="modal__video"
+        muted
+        playsinline
+        loop
+        data-modal-video
+        data-sub-event="onehp: open-request"
+      >
+        <source src="/src/assets/video/onehp.webm" type="video/webm" />
+      </video>
+    </div>
+    <p class="modal__text">
+      <span class="bold-text">ОneHP</span> - это минималистичный раннер, в котором у игрока есть
+      только одно очко здоровья, и он должен уклоняться от врагов, прыгая или пригибаясь. Проект
+      демонстрирует чистый JavaScript без фреймворков, рендеринг через DOM, модульную архитектуру и
+      событийно-ориентированную систему PubSub.
+    </p>
+
+    <h3 class="modal__subtitle">Особенности</h3>
+    <ul class="modal__list">
+      <li class="modal__item">Чистый JavaScript без фреймворков и Canvas;</li>
+      <li class="modal__item">Полностью DOM-ориентированные анимации;</li>
+      <li class="modal__item">
+        Модульная архитектура (игрок, враги, игровой мир, столкновения, счёт);
+      </li>
+      <li class="modal__item">Поток событий PubSub для слабосвязанной логики;</li>
+      <li class="modal__item">Игровой цикл на основе requestAnimationFrame;</li>
+      <li class="modal__item">Обнаружение столкновений с помощью DOM-хитбоксов;</li>
+      <li class="modal__item">Сохранение рекорда в localStorage;</li>
+      <li class="modal__item">Спрайты и визуальные элементы, созданные вручную.</li>
+    </ul>
+
+    <h3 class="modal__subtitle">Обзор архитектуры</h3>
+    <p class="modal__text">
+      Игра построена на небольших изолированных модулях, каждый из которых отвечает за определённую
+      часть логики:
+    </p>
+    <ul class="modal__list">
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль игрока - состояние, анимации, логика прыжка и
+        приседания;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль врагов - создание врагов, их перемещение и пул
+        объектов;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль игрового мира - скорость мира и фон;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль столкновений - проверка хитбоксов и события
+        столкновений;
+      </li>
+      <li class="modal__item">
+        <span class="bold-text"></span>Модуль счёта - подсчёт очков и сохранение данных в
+        localStorage.
+      </li>
+    </ul>
+    <p class="modal__text">
+      Все модули импортируются в главный index.js, который запускает основной игровой цикл.
+    </p>
+
+    <h3 class="modal__subtitle">Поток событий PubSub</h3>
+    <p class="modal__text">
+      В игре используется лёгкий паттерн публикации-подписки (PubSub), который позволяет сохранять
+      слабую связанность между модулями:
+    </p>
+    <ul class="modal__list">
+      <li class="modal__item">Модуль столкновений обнаруживает столкновение.</li>
+      <li class="modal__item">Публикует событие "collision:detected".</li>
+      <li class="modal__item">
+        Модуль игрока получает событие, обновляет своё состояние и публикует "player:dead".
+      </li>
+      <li class="modal__item">
+        Модули игрового мира, врагов и счёта получают это событие и останавливают или изменяют своё
+        поведение.
+      </li>
+    </ul>
+    <p class="modal__text">
+      Такой подход упрощает расширение системы и делает её логику более понятной.
+    </p>
+
+    <h3 class="modal__subtitle">Графика</h3>
+    <p class="modal__text">Все спрайты и визуальные ресурсы были разработаны вручную в Figma.</p>
+
+    <h3 class="modal__subtitle">Технологии</h3>
+    <p class="modal__text">
+      JavaScript (ES Modules) • DOM API • CSS-анимации и переходы • requestAnimationFrame •
+      localStorage
+    </p>
+  </div>
+</dialog>

@@ -1,0 +1,43 @@
+.project-links {
+  display: flex;
+  flex-direction: row;
+  column-gap: $xs;
+}
+
+.project-link {
+  @include centering;
+
+  inline-size: min-content;
+  block-size: rem(32);
+  padding-inline: $md;
+  border-radius: $radius-sm;
+
+  background-color: $primary;
+  box-shadow: $shadow-sm;
+
+  transition:
+    translate $medium $ease-out,
+    box-shadow $medium $ease-out,
+    scale $slow $ease-out,
+    opacity $slow $ease-out;
+
+  &:focus-visible {
+    translate: 0 rem(-2);
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+    box-shadow: $shadow-md;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 rem(-2);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+.project-icon {
+  width: rem(20);
+  height: rem(20);
+  fill: $secondary;
+}

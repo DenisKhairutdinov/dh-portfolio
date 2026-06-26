@@ -1,0 +1,233 @@
+.modal {
+  @include modal;
+
+  overflow: hidden;
+
+  max-inline-size: rem(800);
+  padding: $md;
+  padding-block-end: $xl;
+  border-radius: $radius-xl;
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  @media (width <= calc(rem(800) + #{$sm} * 2)) {
+    margin-inline: $sm;
+  }
+}
+
+.modal__header {
+  display: grid;
+  grid-template-areas: 'title close' 'description close' 'links links';
+  grid-template-columns: 2fr 1fr;
+  flex-direction: row;
+
+  inline-size: 100%;
+  margin-block-end: $md;
+  padding-block-end: $md;
+  padding-inline-start: $xs;
+  border-block-end: 1px solid $ghost;
+
+  &--design {
+    padding-block-end: 0;
+  }
+}
+
+.modal__title {
+  @include heading-2;
+  @include bold-text;
+
+  grid-area: title;
+}
+
+.modal__description {
+  @include paragraph;
+
+  grid-area: description;
+  margin-block-end: $xs;
+}
+
+.close-button {
+  @include centering;
+
+  cursor: pointer;
+
+  grid-area: close;
+  justify-self: end;
+
+  inline-size: rem(32);
+  block-size: rem(32);
+  border-radius: $radius-sm;
+
+  background-color: $primary;
+  box-shadow: $shadow-sm;
+
+  transition:
+    translate $medium $ease-out,
+    box-shadow $medium $ease-out;
+
+  &:focus-visible {
+    translate: 0 rem(-2);
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+    box-shadow: $shadow-md;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 rem(-2);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+.close-button__icon {
+  width: rem(20);
+  height: rem(20);
+}
+
+.modal__project-links {
+  grid-area: links;
+}
+
+.modal__wrapper {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: $xs;
+
+  padding-inline: $xs $md;
+  border-radius: $radius-xl;
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+}
+
+.modal__video-wrapper {
+  position: relative;
+
+  overflow: hidden;
+  flex-shrink: 0;
+
+  aspect-ratio: 6 / 3;
+  inline-size: 100%;
+  margin-block-end: $md;
+  border-radius: $radius-xl;
+
+  box-shadow: $shadow-sm;
+}
+
+.modal__video {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  scale: 1.01;
+
+  inline-size: 100%;
+
+  object-fit: cover;
+}
+
+.modal__photo-wrapper {
+  position: relative;
+
+  overflow: hidden;
+  flex-shrink: 0;
+
+  aspect-ratio: 1 / 1;
+  inline-size: 100%;
+  block-size: 100%;
+  margin-block-end: $xs;
+  border-radius: $radius-xl;
+
+  box-shadow: $shadow-sm;
+}
+
+.modal__photo {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+
+  inline-size: 100%;
+  min-block-size: 100%;
+}
+
+.modal__subtitle {
+  @include heading-3;
+
+  margin-block-end: $xs;
+  padding-block-start: $xs;
+
+  &--design {
+    max-inline-size: rem(240);
+
+    @media (width <= 576) {
+      @include paragraph;
+    }
+  }
+
+  @media (width > 576) {
+    @include bold-text;
+  }
+}
+
+.modal__text {
+  @include paragraph;
+
+  margin-block-end: $xs;
+}
+
+.modal__list {
+  @include paragraph;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: $base;
+
+  margin-block-end: $xs;
+  padding-inline-start: $lg;
+
+  list-style-type: disc;
+}
+
+.modal__project-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: $md;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__lighthouse {
+  display: flex;
+  flex-direction: column;
+  row-gap: $xs;
+  padding-block-end: $xs;
+}
+
+.modal__lighthouse-wrapper {
+  position: relative;
+  aspect-ratio: 6 / 3;
+  inline-size: 100%;
+  border-radius: $radius-xl;
+}
+
+.modal__lightouse-image {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: $radius-xl;
+
+  object-fit: cover;
+  box-shadow: $shadow-sm;
+}

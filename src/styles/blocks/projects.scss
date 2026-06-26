@@ -1,0 +1,26 @@
+.projects__wrapper {
+  inline-size: 100%;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(#{$xs} / 2 + #{$xs});
+
+  // inline-size: max-content;
+
+  @media (width <= 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (width <= 476px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.projects__item {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  inline-size: 100%;
+}
